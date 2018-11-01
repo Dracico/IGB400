@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour {
         
         transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
 
-
         Vector3 movement = transform.forward * speed * Time.deltaTime;
 
         if (Input.GetKey("z"))
