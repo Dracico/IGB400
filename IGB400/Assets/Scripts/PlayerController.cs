@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour {
     private float yaw = 0.0f;
     private float pitch = 0.0f;
 
+    public Vector3 move;
+
     // Use this for initialization
     void Start () {
         rig = GetComponent<Rigidbody>();
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour {
         transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
 
         Vector3 movement = transform.forward * speed * Time.deltaTime;
+        move = movement;
 
         if (Input.GetKey("z"))
         {
